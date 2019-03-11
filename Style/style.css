@@ -12,7 +12,7 @@ body{
     top: 0px;
     right: 0px;
     background-color: grey;
-    margin-right: 0;
+    margin-right: -450px;
     transition: 0.3s;
     z-index: 1;
 }
