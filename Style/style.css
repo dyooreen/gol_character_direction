@@ -13,7 +13,7 @@ body{
     right: 0px;
     background-color: grey;
     margin-right: -450px;
-    transition: 0.3s;
+    transition: 0.6s;
     z-index: 1;
 }
 h1{
