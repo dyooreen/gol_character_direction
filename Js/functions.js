@@ -1,3 +1,4 @@
+
 function WriteDirections(newX, newY) {
     var thisX = newX - redGlassArr[0].x
     var thisY = newY - redGlassArr[0].y;
@@ -42,6 +43,18 @@ function DeleteDirections(x,y) {
         } 
     }
 }
+function CreateMatrix(m) {
+    var matrix = [];
+    for (var i = 0; i < m; i++) {
+        matrix.push([]);
+        for (var j = 0; j < m; j++) {
+            matrix[i][j] = 0;
+        }
+    }
+    matrix[Math.floor(m / 2)][Math.floor(m / 2)] = 1
+    return matrix;
+}
+
 function CreateMatrix(m) {
     var matrix = [];
     for (var i = 0; i < m; i++) {
