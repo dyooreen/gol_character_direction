@@ -1,20 +1,22 @@
 var greyGlassArr = []
 var redGlassArr = []
-
 var canv = 600;
-var resolution = 11;
+var resolution = randomNum()
 var side = Math.floor(canv / resolution);
 var border = (canv / resolution - side) * resolution - 1;
 var matrix = CreateMatrix(resolution);
 function setup() {
-    $("button").on("click", () => {
+    $("#ok").on("click", () => {
         canv = 600
         var x = $("input").val()
-        resolution = x;
-        side = Math.floor(canv / resolution);
-        border = (canv / resolution - side) * resolution - 1;
-        matrix = CreateMatrix(resolution);
-        createCanvas(canv - border, canv - border);
+        if (x > 2) {
+            resolution = x;
+            side = Math.floor(canv / resolution);
+            border = (canv / resolution - side) * resolution - 1;
+            matrix = CreateMatrix(resolution);
+            createCanvas(canv - border, canv - border);
+        }
+
     })
     createCanvas(canv - border, canv - border);
     background(0)
@@ -51,19 +53,21 @@ function draw() {
     drawObject()
 }
 function mouseClicked() {
-    $("button").on("click", () => {
+    $("#ok").on("click", () => {
         var x = $("input").val()
-        resolution = x;
-        side = Math.floor(canv / resolution);
-        for(var i = 1;i<redGlassArr.length;i++){
-            redGlassArr.splice(i,1)
+        if (x > 2) {
+            resolution = x;
+            side = Math.floor(canv / resolution);
+            for (var i = 1; i < redGlassArr.length; i++) {
+                redGlassArr.splice(i, 1)
+            }
+            greyGlassArr = []
+            redGlassArr[0].x = Math.floor(resolution / 2)
+            redGlassArr[0].y = Math.floor(resolution / 2)
+            $("#div2").html("")
+            drawObject()
+            createObject()
         }
-        greyGlassArr = []
-        redGlassArr[0].x = Math.floor(resolution / 2)
-        redGlassArr[0].y = Math.floor(resolution / 2)
-        $("#div2").html("")
-        drawObject()
-        createObject()
     })
     var x = floor(mouseX / side);
     var y = floor(mouseY / side);
@@ -84,10 +88,16 @@ function mouseClicked() {
 }
 
 function doubleClicked() {
-    $("button").on("click", () => {
+    $("#ok").on("click", () => {
         var x = $("input").val()
-        resolution = x;
-        side = Math.floor(canv / resolution);
+        if (x > 2) {
+            canv = 600;
+            resolution = x;
+            side = Math.floor(canv / resolution);
+            matrix = CreateMatrix(resolution);
+            drawObject()
+            createObject()
+        }
     })
     var x = floor(mouseX / side);
     var y = floor(mouseY / side);
@@ -107,11 +117,12 @@ function doubleClicked() {
                             count[i].remove()
                         }
                     }
-                    break;
+                   
                 }
             }
         }
 
     }
 }
+
 

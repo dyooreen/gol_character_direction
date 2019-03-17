@@ -64,7 +64,7 @@ h1{
 }
 #tools{
     position: relative;
-    width: 390px;
+    width: 571px;
     height: 54px;
     background-color: grey;
     bottom: 10px;
@@ -80,7 +80,6 @@ input{
     font-size: 16px;
     letter-spacing: 4px;
     color: white;
-    max-lines: 2;
 }
 button{
     padding: 9px;
@@ -90,4 +89,12 @@ button{
 }
 label{
     font-size: 19px;
+}
+#copy{
+    width: 100px;
+    height: 50px;
+    background-color: pink;
+}
+#copycode{
+    margin-left: 11px;
 }
