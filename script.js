@@ -2,8 +2,7 @@ var greyGlassArr = []
 var redGlassArr = []
 var canv = 600;
 var resolution = randomNum()
-var side = Math.floor(canv / resolution);
-var border = (canv / resolution - side) * resolution - 1;
+var side = canv / resolution;
 var matrix = CreateMatrix(resolution);
 function setup() {
     $("#ok").on("click", () => {
@@ -11,15 +10,14 @@ function setup() {
         var x = $("input").val()
         if (x > 2) {
             resolution = x;
-            side = Math.floor(canv / resolution);
-            border = (canv / resolution - side) * resolution - 1;
+            side = canv / resolution;
             matrix = CreateMatrix(resolution);
-            createCanvas(canv - border, canv - border);
+            createCanvas(canv + 1, canv + 1);
         }
 
     })
-    createCanvas(canv - border, canv - border);
-    background(0)
+    createCanvas(canv + 1, canv + 1);
+    
     createObject()
 }
 function createObject() {
@@ -57,7 +55,7 @@ function mouseClicked() {
         var x = $("input").val()
         if (x > 2) {
             resolution = x;
-            side = Math.floor(canv / resolution);
+            side = canv / resolution;
             for (var i = 1; i < redGlassArr.length; i++) {
                 redGlassArr.splice(i, 1)
             }
@@ -91,9 +89,8 @@ function doubleClicked() {
     $("#ok").on("click", () => {
         var x = $("input").val()
         if (x > 2) {
-            canv = 600;
             resolution = x;
-            side = Math.floor(canv / resolution);
+            side = canv / resolution;
             matrix = CreateMatrix(resolution);
             drawObject()
             createObject()
