@@ -1,37 +1,33 @@
 function WriteDirections(newX, newY) {
     var thisX = newX - redGlassArr[0].x
     var thisY = newY - redGlassArr[0].y;
-    if (thisX > 0) {
-        thisX = Math.abs(thisX);
-        thisX = thisX.toString();
-        thisX = `+ ${thisX}`
-    }
-    else if (thisX == 0) {
-        thisX = ""
-    }
-    else if (thisX < 0) {
-        thisX = Math.abs(thisX);
-        thisX = thisX.toString();
-        thisX = `- ${thisX}`
-    }
-    if (thisY > 0) {
-        thisY = Math.abs(thisY);
-        thisY = thisY.toString();
-        thisY = `+ ${thisY}`
-    }
-    else if (thisY == 0) {
-        thisY = " "
-    }
-    else if (thisY < 0) {
-        thisY = Math.abs(thisY);
-        thisY = thisY.toString();
-        thisY = `- ${thisY}`
-    }
+
+    thisX = makeString(thisX)
+    thisY = makeString(thisY)
+
     $("#div2").append(`
         <code class="dirElem" data-x="${newX}" data-y="${newY}">    
         [this.x ${thisX},this.y ${thisY}],
         </code>`)
+
+
+    function makeString(b){
+        if(b == 0) {
+            b = ""
+        }
+        else{
+            var op = (b>0) ? "+" : "-" 
+            
+            b = Math.abs(b);
+            b = thisX.toString();
+            b = `${op} ${b}`
+    
+        }
+    
+        return b;
+    }
 }
+
 function DeleteDirections(x, y) {
     var count = $("#div2 .dirElem")
     for (var i = 0; i < count.length; i++) {
