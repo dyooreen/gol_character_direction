@@ -71,6 +71,8 @@ h1 {
   padding: 10px;
   padding-left: 14px;
   padding-bottom: 13px;
+  display: flex;
+  align-items: center;
 }
 input {
   padding: 10px;
@@ -97,4 +99,5 @@ label {
 }
 #copycode {
   margin-left: 11px;
+  width: 100%;
 }
