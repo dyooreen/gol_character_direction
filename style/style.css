@@ -1,100 +1,100 @@
-body{
-    font-family: 'Overpass', sans-serif;
+body {
+  font-family: "Overpass", sans-serif;
 }
-#main{
-    display: inline-block;
-    height: 100%;
-    overflow: auto;
-    padding: 30px;
-    box-sizing: border-box;
-    font-size: 20px;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    background-color: grey;
-    margin-right: -450px;
-    transition: 0.6s;
-    z-index: 1;
+#main {
+  display: inline-block;
+  height: 100%;
+  overflow: auto;
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 20px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background-color: grey;
+  margin-right: -450px;
+  transition: 0.6s;
+  z-index: 1;
 }
-h1{
-    letter-spacing: 5px;
+h1 {
+  letter-spacing: 5px;
 }
-.dirElem{
-    margin-left: 30px;
-    display: block;
-    margin-top: 9px;
-    margin-bottom: 5px;
+.dirElem {
+  margin-left: 30px;
+  display: block;
+  margin-top: 9px;
+  margin-bottom: 5px;
 }
-#code{
-    color: black;
-    margin: auto;
-    width: 390px;
-    min-height: 200px;
+#code {
+  color: black;
+  margin: auto;
+  width: 390px;
+  min-height: 200px;
 }
-#menu{
-    width: 42px;
-    height: 42px;
-    background-color: red;
-    position: fixed;
-    right: 18px;
-    top: 10px;
-    padding-bottom: 0px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 0px;
-    box-sizing: border-box;
+#menu {
+  width: 42px;
+  height: 42px;
+  background-color: red;
+  position: fixed;
+  right: 18px;
+  top: 10px;
+  padding-bottom: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0px;
+  box-sizing: border-box;
 }
-#menu i{
-    position: relative;
-    top: 6px;
-    left: 7px;
+#menu i {
+  position: relative;
+  top: 6px;
+  left: 7px;
 }
-#close{
-    width: 42px;
-    height: 42px;
-    background-color: red;
-    position: absolute;
-    right: 18px;
-    top: 10px;
-    padding-bottom: 0px;
-    padding-left: 11px;
-    padding-right: 5px;
-    padding-top: 1px;
-    box-sizing: border-box;
+#close {
+  width: 42px;
+  height: 42px;
+  background-color: red;
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  padding-bottom: 0px;
+  padding-left: 11px;
+  padding-right: 5px;
+  padding-top: 1px;
+  box-sizing: border-box;
 }
-#tools{
-    position: relative;
-    width: 576px;
-    height: 54px;
-    background-color: grey;
-    bottom: 10px;
-    padding: 10px;
-    padding-left: 14px;
-    padding-bottom:13px;
+#tools {
+  position: relative;
+  width: 576px;
+  height: 54px;
+  background-color: grey;
+  bottom: 10px;
+  padding: 10px;
+  padding-left: 14px;
+  padding-bottom: 13px;
 }
-input{
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid;
-    background-color: red;
-    font-size: 16px;
-    letter-spacing: 4px;
-    color: white;
+input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid;
+  background-color: red;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: white;
 }
-button{
-    padding: 9px;
-    border: 1px solid white;
-    background-color: red;
-    font-size: 17px;
+button {
+  padding: 9px;
+  border: 1px solid white;
+  background-color: red;
+  font-size: 17px;
 }
-label{
-    font-size: 19px;
+label {
+  font-size: 19px;
 }
-#copy{
-    width: 100px;
-    height: 50px;
-    background-color: pink;
+#copy {
+  width: 100px;
+  height: 50px;
+  background-color: pink;
 }
-#copycode{
-    margin-left: 11px;
+#copycode {
+  margin-left: 11px;
 }
